@@ -1,0 +1,99 @@
+/* =============================================
+   BASE.CSS — Variables, Reset, Typography
+   SiFas / Campus Fix
+   ============================================= */
+
+:root {
+  /* Colors */
+  --clr-primary:      #1B3A6B;
+  --clr-primary-dk:   #122850;
+  --clr-primary-lt:   #2A56A4;
+  --clr-accent:       #F5821F;
+  --clr-accent-dk:    #D96E10;
+  --clr-accent-lt:    #FFF0E0;
+  --clr-success:      #16A34A;
+  --clr-success-lt:   #DCFCE7;
+  --clr-warning:      #D97706;
+  --clr-warning-lt:   #FEF3C7;
+  --clr-danger:       #DC2626;
+  --clr-danger-lt:    #FEE2E2;
+  --clr-info:         #0891B2;
+  --clr-info-lt:      #CFFAFE;
+
+  /* Neutrals */
+  --clr-bg:           #F4F6FA;
+  --clr-surface:      #FFFFFF;
+  --clr-border:       #E2E8F0;
+  --clr-border-dk:    #CBD5E1;
+  --clr-text:         #1E293B;
+  --clr-text-2:       #475569;
+  --clr-text-3:       #94A3B8;
+  --clr-muted:        #64748B;
+
+  /* Layout */
+  --sidebar-w:        260px;
+  --topbar-h:         64px;
+  --radius-sm:        6px;
+  --radius:           10px;
+  --radius-lg:        16px;
+  --shadow-sm:        0 1px 3px rgba(0,0,0,.08);
+  --shadow:           0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg:        0 8px 32px rgba(0,0,0,.12);
+
+  /* Typography */
+  --font-body:        'Inter', system-ui, sans-serif;
+  --font-mono:        'Roboto Mono', monospace;
+  --fw-light:         300;
+  --fw-normal:        400;
+  --fw-medium:        500;
+  --fw-semi:          600;
+  --fw-bold:          700;
+  --fw-extrabold:     800;
+
+  /* Transitions */
+  --tr-fast:          150ms ease;
+  --tr:               250ms ease;
+  --tr-slow:          400ms ease;
+}
+
+/* ---- RESET ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--clr-primary-lt); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* ---- UTILITY ---- */
+.hidden { display: none !important; }
+.mt-2  { margin-top: .5rem; }
+.mt-3  { margin-top: .75rem; }
+.mt-4  { margin-top: 1rem; }
+.mt-6  { margin-top: 1.5rem; }
+.mb-4  { margin-bottom: 1rem; }
+.req   { color: var(--clr-danger); }
+.optional { color: var(--clr-text-3); font-size: 12px; }
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--clr-border-dk); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--clr-muted); }
